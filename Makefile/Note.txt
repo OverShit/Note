@@ -1,0 +1,24 @@
+#Makefile
+
+变量:
+1.自定义变量：
+    1.1简单定义方式：
+            val_1 := $(val_2)   //val1为空,若val2在val1前定义，则val1也等于gg
+            val_2 := gg         //val2为gg
+    1.2递归展开定义
+            val_1 = $(val_2)
+            val_2 = gg          //val_1与val_2均为gg
+2.预定义变量：
+    2.1 如CC、CFLAGS、RM等
+        ARFLAGS     库文件维护程序的选项，无默认值
+        ASFLAGS     汇编程序的选项，无默认值
+        CFLAGS      C编译器的选项，无默认值
+        CPPFLAGS    C预编译的选项，无默认值
+        CXXFLAGS    C++编译器选项，无默认值
+        FFLAGS      FORTRAN编译器的选项，无默认值
+        RM          默认值 rm -f
+        CC          默认值 cc
+
+3.自动变量：
+       用于规则的命令中
+       表示规则中的目标提或依赖文件
