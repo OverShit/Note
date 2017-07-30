@@ -12,6 +12,7 @@ PATH_SRC = $(wildcard $(DIR_SRC)/*.c) 	#将src目录下的.c以及路径名赋�
 SRC = $(notdir $(PATH_SRC))				#除去路径名后剩下的文件以及扩展名
 OBJS = $(patsubst %.c, $(DIR_OBJ)/%.o, $(SRC))	
 INC = $(patsubst %.c, $(DIR_INC)/%.d, $(SRC))	
+#patsubst与subst区别在于patsubst只替换后缀
 #OBJS = $(SRC:.c=.o)					#此方法可将.c换成.o，但是无法加上路径
 BIN = $(DIR_BIN)/$(BIN_NAME)		
 
